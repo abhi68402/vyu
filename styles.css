@@ -1156,3 +1156,13 @@ a.book-row:hover { border-color: var(--accent); background: var(--surface-2); }
 #install .ins-x { width: 40px; height: 40px; }
 #app[data-route='theatre'] #install { bottom: calc(max(12px, env(safe-area-inset-bottom)) + 76px); } /* above the sticky bottom bar */
 @media (prefers-reduced-motion: reduce) { #install { transition: none; } }
+
+/* Search stands out: the one filled button in the app bar on phones, and an accent-edged field
+   on wide screens, so it reads first among the round icon buttons. */
+.nav-btn.gs-open { background: var(--accent); border-color: var(--accent); color: var(--ink); box-shadow: 0 4px 14px -4px var(--accent), var(--shadow-sm); }
+.nav-btn.gs-open:hover { background: var(--accent-hi); border-color: var(--accent-hi); color: var(--ink); }
+.nav-btn.gs-open svg { stroke-width: 2.6; }
+.gs-slot .gs-field { height: 48px; border-radius: 24px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, var(--line-2)); box-shadow: 0 0 0 4px var(--accent-soft), var(--shadow-sm); }
+.gs-slot .gs-field:hover { border-color: var(--accent); }
+.gs-slot .gs-field > svg { color: var(--accent); width: 20px; height: 20px; stroke-width: 2.4; }
+.gs-slot .gs-input::placeholder { color: var(--muted); }
